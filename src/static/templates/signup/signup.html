@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{%block jumbotron%}
+<div class="jumbotron">
+  <div class="container">
+    <h1>Hello, world!</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <p><a class="btn btn-default btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+  </div>
+</div>
+{%endblock%}
+{% block content %}
+<div class="col-sm-3">
+  <h2>Heading</h2>
+  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+  <p><a class="btn btn-default" href='{% url "aboutus"%}' role="button">View details &raquo;</a></p>
+</div>
+<div class="col-sm-3">
+  <h2>Heading</h2>
+  <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+  <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+</div>
+<div class="col-sm-3">
+  <h2>pre-ordr</h2>
+  <p>to sit amet risus.</p>
+  <form action="https://www.paypal.com/cgi-bn/websrc" method="POST">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="5XSG8PPLJ9AP">
+      <input type="hidden" name="on0" value="course">
+      <select class="form-control" name="os0">
+          <option value="basic">basic +11 USD</option>
+           <option value="premium">premium +110 USD</option>
+
+      </select>
+      <br />
+      <br />
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="submit" class="btn btn-success btn-block" />
+
+  </form>
+
+</div>
+
+
+
+
+{% endblock content %}
