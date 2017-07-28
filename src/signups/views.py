@@ -23,7 +23,7 @@ def thankyou(request):
         message='wellcome to our site ,we apprecaiteo your business. /n we will be touch soon'
         from_email=settings.EMAIL_HOST_USER
 	print(from_email)
-
+#TO_LIST=form.cleaned_data.get('email')
         to_list=[save_it.email,from_email]
 	print(to_list)
         send_mail(subject,message,from_email,to_list,fail_silently=True)
