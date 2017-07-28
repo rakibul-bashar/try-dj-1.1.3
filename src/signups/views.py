@@ -23,10 +23,9 @@ def thankyou(request):
         message='wellcome to our site ,we apprecaiteo your business. /n we will be touch soon'
         from_email=settings.EMAIL_HOST_USER
 	print(from_email)
-	to_list=[form.cleaned_data.get('email')]
-	print(to_list)
 
-        #to_list=['save_it.email']
+        to_list=[save_it.email,from_email]
+	print(to_list)
         send_mail(subject,message,from_email,to_list,fail_silently=True)
         messages.success(request,"Thankyou for your order")
         return HttpResponseRedirect('/thank-you/')
